@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>富士見・白州のCS立体図と遺跡</title>
+<link rel="stylesheet" href="assets/leaflet.css">
+<style>
+:root{color-scheme:light;--ink:#183430;--muted:#657872;--paper:#f7faf8;--line:#d9e4de;--green:#236454}
+*{box-sizing:border-box}body{margin:0;font-family:"Yu Gothic UI","Meiryo",sans-serif;color:var(--ink);background:var(--paper)}
+header{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:15px 22px;border-bottom:1px solid var(--line);position:relative;z-index:500;background:var(--paper)}
+h1{font-size:20px;margin:0;font-weight:650;letter-spacing:.04em}small{display:block;color:var(--muted);font-size:12px;margin-top:4px}.controls{margin-left:auto;display:flex;align-items:center;gap:15px;flex-wrap:wrap;font-size:13px}label{display:flex;align-items:center;gap:8px}input{accent-color:var(--green)}input[type=range]{width:130px}button,select{font:inherit;border:1px solid var(--line);border-radius:7px;padding:8px 12px;background:white;color:var(--ink);cursor:pointer}button:hover{background:#e7f1ea}button:focus-visible,select:focus-visible{outline:3px solid #60ac9a}
+#map{width:100%;height:calc(100dvh - 117px);min-height:380px;background:#e6eee8}.bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 20px;font-size:12px;color:var(--muted)}a{color:var(--green)}.leaflet-control-attribution{font-size:10px}.leaflet-container{font-family:inherit}.point-card{font-size:13px;line-height:1.8;min-width:175px}.point-card a{display:block}.leaflet-control-scale-line{font-size:11px}.point-dot{width:14px!important;height:14px!important;border:3px solid #fff;border-radius:50%;background:#245f52;box-shadow:0 0 0 2px #245f52}
+@media(max-width:730px){header{padding:12px 15px;gap:12px}.controls{margin-left:0;width:100%;gap:10px}#map{height:calc(100dvh - 168px)}h1{font-size:18px}.bottom{padding:8px 12px}}
+</style>
+<link rel="stylesheet" href="research.css">
+<link rel="stylesheet" href="terrain-export.css">
+<link rel="stylesheet" href="hydro.css">
+<link rel="stylesheet" href="mobile.css">
+<meta name="theme-color" content="#f7faf8"><meta name="apple-mobile-web-app-title" content="富士見CS"><meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+<header><div><h1>富士見・白州のCS立体図と遺跡</h1><small>富士見・白州の公開遺跡記録を地形に重ねて見る</small></div>
+<div class="controls"><div class="area-buttons" aria-label="地域へ移動"><button id="extent">全体</button><button id="fujimi">富士見</button><button id="hakushu">白州</button></div><button id="results">遺跡情報</button><label>背景<select id="base"><option value="pale">地名・道路</option><option value="photo">航空写真</option><option value="none">なし</option></select></label><label>濃さ<input id="opacity" aria-label="地形の濃さ" type="range" min="0" max="100" value="100"><output id="pct">100%</output></label></div></header>
+<main id="map" aria-label="拡大・移動できる富士見・白州のCS立体図"></main>
+<div class="bottom"><span id="terrain-status" role="status">山梨の地形を読み込んでいます…</span><a href="データ出典.html" target="_blank" rel="noopener">データの出典・範囲 ↗</a><span id="position">地形図を読み込んでいます…</span></div>
+<dialog id="research-dialog"><button id="close-results" aria-label="調査結果を閉じる">閉じる ×</button><h2>遺跡情報</h2><section class="hakushu-summary"><h3>白州周辺 · 紫の点 11地点</h3><p>公開された発掘調査報告書の代表座標を追加しました。縄文・平安の集落や中世の城館などを確認できます。</p><select id="hakushu-site-jump" aria-label="白州の遺跡へ移動"><option value="">白州の遺跡を選択…</option></select><button id="hakushu-sites-extent">白州の遺跡を全体表示</button><a class="report-link" href="白州の遺跡記録.html" target="_blank" rel="noopener">白州11地点の詳細・位置未表示の関連資料4件 ↗</a><p class="small-note">点は代表位置で、遺跡の範囲ではありません。全遺跡を網羅していません。根古屋遺跡は資料間の位置差があり、橙の縁で示しています。白州の新たな地形候補の判読は未実施です。</p></section><h3 class="fujimi-section-title">富士見町 · 遺跡と地形の一次調査</h3><p>既知の遺跡があります。新たな古墳・遺跡の発見は確定していません。</p><p class="small-note">富士見町データ28図郭を概観し、3地点を拡大照合。小規模な遺構や地下遺構まで調べ尽くしたものではありません。</p><a class="report-link" href="調査結果.html" target="_blank" rel="noopener">写真・根拠・28図郭の確認記録を見る ↗</a><h3>地形を拡大して確認した地点</h3><div id="observations-list"></div><h3>富士見の公開記録の地点へ移動</h3><p class="small-note">32記録・26名称。町内の遺跡総数ではありません。点は遺跡の範囲を示しません。</p><select id="site-jump" aria-label="公開記録の地点へ移動"><option value="">遺跡を選択…</option></select><div id="selected-site-note"></div></dialog>
+<script src="assets/leaflet.js"></script><script src="data.js"></script><script src="research.js"></script>
+<script>
+const source='https://www.geospatial.jp/ckan/dataset/r3-r4_cs/resource/f8f794fd-451b-409e-bef2-cd484cbe5868';
+const map=L.map('map',{minZoom:10,maxZoom:20,zoomControl:true,zoomAnimation:false,fadeAnimation:false,markerZoomAnimation:false});
+const bounds=L.latLngBounds(CS_DATA.bounds);
+// Navigation extent, not an administrative boundary or surveyed area.
+const hakushuBounds=L.latLngBounds([[35.73,138.18],[35.90,138.37]]);
+const combinedBounds=L.latLngBounds(bounds.getSouthWest(),bounds.getNorthEast()).extend(hakushuBounds);
+map.fitBounds(combinedBounds,{padding:[15,15],animate:false});
+const credits='<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>';
+const pale=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxNativeZoom:18,maxZoom:20,attribution:credits}).addTo(map);
+const photo=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg',{maxNativeZoom:18,maxZoom:20,attribution:credits});
+const available=new Set(CS_DATA.tiles);
+const blank='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
+// Preserve the local Nagano layer above Yamanashi where the source images overlap.
+const yamanashi=L.tileLayer('https://shi-works.com/raster-tiles/pref-yamanashi/yamanashi-csmap-tiles/{z}/{x}/{y}.webp',{
+  minZoom:10,maxNativeZoom:18,maxZoom:20,noWrap:true,opacity:1,zIndex:2,
+  bounds:[[35.16838444,138.18008859],[35.97170841,139.13441367]],
+  attribution:'山梨CS：<a href="https://www.pref.yamanashi.jp/biz-brand/r7tengun.html" target="_blank" rel="noopener">山梨県DEM</a>を<a href="https://github.com/shiwaku/csmap-on-maplibre" target="_blank" rel="noopener">shi-worksが加工</a>（<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>）'
+});
+let yamanashiFailed=false;
+const terrainStatus=document.getElementById('terrain-status');
+yamanashi.on('loading',()=>{yamanashiFailed=false;terrainStatus.textContent='山梨の地形を読み込んでいます…';});
+yamanashi.on('tileerror',()=>{yamanashiFailed=true;});
+yamanashi.on('load',()=>{terrainStatus.textContent=yamanashiFailed?'山梨CS：一部未表示（範囲外・欠測・通信状態を確認）':'山梨CS：オンライン表示 ／ 白州の公開遺跡11地点を収録';});
+yamanashi.addTo(map);
+const CSLayer=L.TileLayer.extend({getTileUrl:function(c){const key=c.z+'/'+c.x+'/'+c.y;return available.has(key)?'tiles/'+key+'.webp':blank;}});
+const terrain=new CSLayer('',{maxNativeZoom:17,maxZoom:20,minZoom:10,bounds:bounds,opacity:1,zIndex:3,attribution:'CS立体図：<a href="'+source+'" target="_blank" rel="noopener">長野県林務部（富士見町）</a>・閲覧用に再投影'}).addTo(map);
+L.control.scale({imperial:false,maxWidth:140}).addTo(map);
+function showArea(area){map.closePopup();map.fitBounds(area==='hakushu'?hakushuBounds:area==='fujimi'?bounds:combinedBounds,{padding:[15,15],animate:false});}
+document.getElementById('extent').onclick=()=>showArea('all');
+document.getElementById('fujimi').onclick=()=>showArea('fujimi');
+document.getElementById('hakushu').onclick=()=>showArea('hakushu');
+document.getElementById('opacity').oninput=e=>{const opacity=+e.target.value/100;terrain.setOpacity(opacity);yamanashi.setOpacity(opacity);document.getElementById('pct').textContent=e.target.value+'%'};
+document.getElementById('base').onchange=e=>{map.removeLayer(pale);map.removeLayer(photo);if(e.target.value==='pale')pale.addTo(map).bringToBack();if(e.target.value==='photo')photo.addTo(map).bringToBack()};
+let point;
+map.on('click',e=>{if(window.TerrainExport?.isSelecting())return;if(point)map.removeLayer(point);const {lat,lng}=e.latlng;point=L.marker(e.latlng,{icon:L.divIcon({className:'point-dot',iconSize:[14,14],iconAnchor:[7,7]})}).addTo(map);const link='https://maps.gsi.go.jp/#17/'+lat.toFixed(6)+'/'+lng.toFixed(6)+'/';point.bindPopup('<div class="point-card">選んだ地点<br>北緯 '+lat.toFixed(6)+'°<br>東経 '+lng.toFixed(6)+'°<a href="'+link+'" target="_blank" rel="noopener">地理院地図で見る ↗</a></div>').openPopup()});
+const status=()=>{const c=map.getCenter();document.getElementById('position').textContent='中心 '+c.lat.toFixed(5)+', '+c.lng.toFixed(5)+' ／ 拡大 '+map.getZoom()};map.on('moveend',status);status();
+window.addEventListener('resize',()=>map.invalidateSize());
+const requestedArea=new URLSearchParams(location.hash.slice(1)).get('area');if(['hakushu','fujimi','all'].includes(requestedArea))showArea(requestedArea);
+const savedView=new URLSearchParams(location.hash.slice(1)).get('view')?.split(',').map(Number);if(savedView?.length===3&&savedView.every(Number.isFinite)&&Math.abs(savedView[0])<85&&Math.abs(savedView[1])<=180&&savedView[2]>=10&&savedView[2]<=20)map.setView([savedView[0],savedView[1]],savedView[2],{animate:false});
+</script>
+<script src="research-map.js"></script>
+<script src="hakushu-sites.js"></script><script src="hakushu-map.js"></script>
+<script src="hydro-data.js"></script><script src="hydro-tiles.js"></script><script src="hydro-map.js"></script>
+<script src="terrain-core.js"></script><script src="terrain-selection.js"></script><script src="terrain-export.js"></script>
+<script src="mobile.js"></script>
+</body></html>

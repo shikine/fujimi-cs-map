@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>地形・遺跡データの出典と範囲</title><style>body{max-width:850px;margin:40px auto;padding:0 22px;font-family:"Yu Gothic UI",Meiryo,sans-serif;color:#183b30;line-height:1.85;background:#f7faf8}h1{font-size:26px}h2{font-size:20px;margin-top:32px}a{color:#236454}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #d9e4de;padding:12px}th{width:25%}.note{background:#e8f0e9;border-radius:8px;padding:16px;font-size:14px}footer{font-size:12px;color:#617569;margin:30px 0}</style></head><body>
+<a href="index.html">← 地図へ戻る</a><h1>地形・遺跡データの出典と範囲</h1>
+<p>富士見町のCS立体図に、白州町周辺（山梨県北杜市）を見られる山梨県のCS立体図を重ねています。行政界で切り抜いた図ではありません。</p>
+<h2>白州周辺・山梨県</h2><table>
+<tr><th>原データ</th><td><a href="https://www.pref.yamanashi.jp/biz-brand/r7tengun.html">山梨県の3次元点群データ</a>に含まれる航空レーザ由来の0.5m格子DEM。</td></tr>
+<tr><th>CS加工・配信</th><td><a href="https://github.com/shiwaku/csmap-on-maplibre">shi-works</a>。山梨県の公開DEMからCS立体図を作成し、Web地図用に変換した配信画像を利用しています。</td></tr>
+<tr><th>表示の細かさ</th><td>配信元の表記は0.5m、配信ズームは4～18。この地図では10～18を使用し、それより拡大すると画像を拡大表示します。画面上の1画素が常に0.5mという意味ではありません。</td></tr>
+<tr><th>利用条件</th><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>（配信元の山梨県レイヤー表記）。出典：山梨県DEM／CS加工・配信：shi-works。この地図では他の地形・遺跡記録と重ね、濃さを調整して表示しています。</td></tr>
+<tr><th>閲覧範囲</th><td>白州ボタンは周辺へ移動するための目安です。白州の行政界ではなく、山梨県内の配信データはその先へ移動しても閲覧できます。欠測・未配信の部分もあり得ます。</td></tr>
+<tr><th>計測時期</th><td>地点別の計測年は未確認。元データの名称にある「2024」を一律の撮影年として扱っていません。</td></tr>
+<tr><th>接続</th><td>インターネット接続が必要です。配信元は試験公開のため、変更・終了する場合があります。</td></tr>
+</table>
+<p class="note">白州周辺の公開遺跡記録11地点を重ねています。代表座標が確認できた記録の抜粋で、遺跡の全数や範囲ではありません。白州の新たな地形候補の判読は未実施です。地図に点がないことは、遺跡がないことを意味しません。</p>
+<h2>白州の遺跡記録</h2><p>奈良文化財研究所の全国遺跡報告総覧・全国文化財総覧に掲載された報告書抄録から、所在地に白州を含み、世界測地系の代表座標が得られた11地点を収録しました。中山砦は白州・武川にまたがる所在地の記録です。出典・時代・遺構・座標の採用方法は<a href="白州の遺跡記録.html">白州の遺跡記録</a>で確認できます。</p><p>根古屋遺跡は別公開資料の座標と約700mの差があり、位置要確認として表示。日本測地系の原座標を持つ記録は、資料サイトが自動生成した世界測地系の値を採用しました。座標が確認できない関連資料4件は一覧だけに掲載しています。富士見町の一次調査と、白州の既知遺跡の追加は別の作業です。</p><h2>富士見町・長野県</h2>
+<p><a href="https://www.geospatial.jp/ckan/dataset/r3-r4_cs/resource/f8f794fd-451b-409e-bef2-cd484cbe5868">長野県林務部 R3・R4_CS立体図「富士見町.zip」</a>のGeoTIFF 28枚、1m画素。Web地図向けに再投影し、ローカル保存した画像を表示しています。長野県と山梨県が重なる箇所では、従来の富士見町画像を上に表示します。</p>
+<p>元ページのライセンス表示は GNU Free Documentation License。詳細は<a href="利用案内.txt">利用案内</a>を参照してください。既存の調査記録は<a href="調査結果.html">富士見町データ28図郭の一次調査</a>です。</p>
+<h2 id="model3d">四角い範囲の立体出力</h2>
+<p>「四角く切り出す・3D」から対角の2点を選び、青い丸のドラッグや角度入力で範囲を回転できます。0°は北が上で、角度は時計回りです。「北を上に戻す」で0°に戻せます。模型の横幅・高さの強調・土台も指定できます。STLとOBJを、出典・位置・縮尺の説明とともにZIP保存します。</p>
+<p>回転した矩形の内側を標高サンプリングし、模型の辺をX/Y軸に揃えます。単位はmm、選択範囲の右が+X、上が+Y、平らな底面がZ=0です。0°のときは東が+X、北が+Yです。切り取り角度・四隅の経緯度・模型上の北の向きはmetadata.jsonに保存します。boundsWGS84は外接範囲、footprintWGS84が実際の切り取り形状です。</p>
+<p>形状にはCS画像とは別の<strong>実標高データ</strong>を使います。<a href="https://tiles.gsj.jp/tiles/elev2/index.html">産総研シームレス標高タイル・バージョン2</a>の山梨県、長野県林業総合センター、長野県砂防課の順に利用し、欠ける点には<a href="https://maps.gsi.go.jp/development/ichiran.html#dem">国土地理院の1m・5m・10m標高タイル</a>を順に使います。「国土地理院のみ」も選べます。値が得られない点が残る場合は出力しません。</p>
+<p>県の元標高は0.5m級ですが、実際の出力間隔は選択範囲と設定で変わります。1辺は5m～10km、長辺は最大400分割。広い範囲は自動的に間引きます。標高を周囲4点から補間し、最小標高を引いて模型縮尺へ変換、土台を付けています。水平寸法は範囲中央の緯度でWebメルカトルの縮尺を補正した近似値で、測量用の座標系ではありません。</p>
+<p>長野県林業総合センターの元標高は平成25～26年作成で、表示中のR3・R4のCS画像と時期が異なります。異なる標高資料の境目や欠測補完箇所で段差が生じる場合があります。完成画面と同梱説明に、実際に使用したデータと割合・出力間隔を記録します。画面のプレビューは軽量化していますが、保存する模型は指定の出力間隔です。</p>
+<p>出典：産総研シームレス標高タイル（原データ：山梨県・林野庁／長野県林業総合センター／長野県建設部砂防課）を加工、国土地理院・地理院タイルを加工。<a href="https://gbank.gsj.jp/seamless/elev/">産総研の利用案内</a>はCC BY 4.0互換で、元データ提供者の条件も適用されます。</p>
+<h2>読み方</h2><p>CS立体図は地形の凹凸を色で表現した画像です。色だけで古墳・遺跡とは判定できません。立体出力は別途取得した標高データから作成し、CS画像の色やテクスチャは含みません。富士見と白州でCSの作成方法が異なるため、境目の色調差を実際の地形段差と取り違えないようにしてください。</p>
+<p>背景の地名・道路・航空写真：<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>。</p>
+<footer>更新：2026年10月1日。県公式案内の林野庁加工データ旧リンクと forestgeo.info の旧タイルは、この追加作業時に404応答だったため利用していません。</footer>
+</body></html>

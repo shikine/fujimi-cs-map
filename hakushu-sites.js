@@ -1,0 +1,368 @@
+window.HAKUSHU = {
+  "updated": "2026-10-01",
+  "title": "白州周辺の公開遺跡記録",
+  "sites": [
+    {
+      "id": "H130207",
+      "name": "竹宇1遺跡",
+      "reading": "ちくういちいせき",
+      "lat": 35.805277,
+      "lon": 138.318055,
+      "coordinateText": [
+        "35.805277",
+        "138.318055"
+      ],
+      "address": "山梨県北杜市白州町白須2849-１番地",
+      "period": "縄文 平安",
+      "kind": "集落",
+      "features": "竪穴住居 土坑 掘立柱建物",
+      "finds": "",
+      "remarks": "縄文時代中期前葉から後葉の集落跡。竪穴住居28軒、土坑113基。平安時代の集落跡。竪穴住居3軒、掘立柱建物1棟",
+      "reportTitle": "竹宇1遺跡",
+      "reportId": "130207",
+      "published": "20160331",
+      "source": "https://sitereports.nabunken.go.jp/ja/130207",
+      "siteNumber": "6-009",
+      "surveyed": "20141022-20150313",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354819",
+        "lonDms": "1381905"
+      }
+    },
+    {
+      "id": "H130360",
+      "name": "南沢遺跡",
+      "reading": "みなみさわいせき",
+      "lat": 35.831388,
+      "lon": 138.296666,
+      "coordinateText": [
+        "35.831388",
+        "138.296666"
+      ],
+      "address": "山梨県北杜市白州町鳥原729番地ほか",
+      "period": "縄文",
+      "kind": "集落",
+      "features": "竪穴住居 掘立柱建物 土坑 ピット",
+      "finds": "縄文土器 石器 弥生時代の土器 平安時代の土師器",
+      "remarks": "中期前葉（貉沢式期）から中期中葉（井戸尻式期）の住居9軒、土坑40基、ピット130基、掘立柱建物6棟。環状集落と思われる遺跡の一部を発掘調査",
+      "reportTitle": "南沢遺跡",
+      "reportId": "130360",
+      "published": "20200331",
+      "source": "https://sitereports.nabunken.go.jp/ja/130360",
+      "siteNumber": "6-004",
+      "surveyed": "20171211-20180330",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354953",
+        "lonDms": "1381748"
+      }
+    },
+    {
+      "id": "H130362",
+      "name": "堰口遺跡",
+      "reading": "せきぐちいせき",
+      "lat": 35.805555,
+      "lon": 138.321388,
+      "coordinateText": [
+        "35.805555",
+        "138.321388"
+      ],
+      "address": "山梨県北杜市白州町白須1894-1番地ほか",
+      "period": "縄文 平安",
+      "kind": "集落",
+      "features": "竪穴住居 掘立柱建物 集石土坑 土坑 溝跡",
+      "finds": "縄文土器 石器 平安時代の土師器 鹿角",
+      "remarks": "縄文時代前期前葉の住居57軒、前期中葉の住居19軒、前期後葉の住居30軒、前期の掘立柱建物12棟、前期後葉の集石土坑84基、前期後葉の溝跡1条、中期前葉から中葉の住居9軒、中期後葉の住居1軒、縄文時代の土坑721基、ピット999基、平安時代の住居8軒、平安時代の掘立柱建物2棟 北陸産珪質頁岩の石器、布目式土器、漆で文様を描出した中期中葉の土器、諸磯式期と藤内式期の焼失住居、焼けた鹿角1点",
+      "reportTitle": "堰口遺跡",
+      "reportId": "130362",
+      "published": "20200331",
+      "source": "https://sitereports.nabunken.go.jp/ja/130362",
+      "siteNumber": "6-010",
+      "surveyed": "20111212-20121130",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354820",
+        "lonDms": "1381917"
+      }
+    },
+    {
+      "id": "H4023",
+      "name": "雑木遺跡",
+      "reading": "ぞうきいせき",
+      "lat": 35.816,
+      "lon": 138.315,
+      "coordinateText": [
+        "35.816",
+        "138.315"
+      ],
+      "address": "山梨県北巨摩郡白州町白須字雑木6107/6109",
+      "period": "縄文 / 平安",
+      "kind": "集落",
+      "features": "土坑 / 竪穴建物7",
+      "finds": "縄文土器 石器 / 土師器",
+      "remarks": "縄文時代前期末の人面土器片が出土。 主な時代：縄文前期から晩期",
+      "reportTitle": "雑木遺跡",
+      "reportId": "4023",
+      "published": "19970320",
+      "source": "https://sitereports.nabunken.go.jp/ja/4023",
+      "siteNumber": "",
+      "surveyed": "19920428-19920529",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。日本測地系の原座標から資料サイトが自動生成した世界測地系の値を採用。公開値は小数点以下3桁で、位置精度に限界があります。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "日本測地系",
+        "latDms": "354846",
+        "lonDms": "1381905"
+      }
+    },
+    {
+      "id": "H4033",
+      "name": "根古屋遺跡",
+      "reading": "ねごやいせき",
+      "lat": 35.804166,
+      "lon": 138.349166,
+      "coordinateText": [
+        "35.804166",
+        "138.349166"
+      ],
+      "address": "山梨県北巨摩郡白州町台ヶ原1605-1ほか",
+      "period": "縄文",
+      "kind": "集落",
+      "features": "住居13 土坑26 竪穴1",
+      "finds": "土器 石器",
+      "remarks": "",
+      "reportTitle": "根古屋遺跡",
+      "reportId": "4033",
+      "published": "19850331",
+      "source": "https://sitereports.nabunken.go.jp/ja/4033",
+      "siteNumber": "6-015",
+      "surveyed": "19831219-19831220 19840601-19841015",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。要確認：別資料の代表点とは約700mの位置差があります。地図には報告書抄録の点を表示しています。",
+      "positionCheck": true,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354815",
+        "lonDms": "1382057"
+      },
+      "alternateSource": "https://geoshape.ex.nii.ac.jp/nrct-poi/resource/19/190000148200.html",
+      "alternateCoordinates": [
+        35.803913,
+        138.341457
+      ]
+    },
+    {
+      "id": "H4040",
+      "name": "古御所東遺跡",
+      "reading": "ふるごしょひがしいせき",
+      "lat": 35.7929,
+      "lon": 138.3227,
+      "coordinateText": [
+        "35.7929",
+        "138.3227"
+      ],
+      "address": "山梨県北巨摩郡白州町横手字古御所2061ほか",
+      "period": "縄文 / 平安 / 中世(細分不明)",
+      "kind": "散布地 / 集落",
+      "features": "遺構なし / 竪穴建物1 / 竪穴建物2 / 地下式壙2 土坑123 竪穴4 掘立柱建物1 溝5 ピット",
+      "finds": "尖頭器 / 縄文土器（押形文） / 縄文土器 土偶 / 土師器 鉄器 / 石臼",
+      "remarks": "種別：包含地 主な時代：縄文草創期 / 種別：包含地 主な時代：縄文早期 / 主な時代：縄文中期",
+      "reportTitle": "古御所東遺跡",
+      "reportId": "4040",
+      "published": "19990320",
+      "source": "https://sitereports.nabunken.go.jp/ja/4040",
+      "siteNumber": "",
+      "surveyed": "19920616-19920904",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。日本測地系の原座標から資料サイトが自動生成した世界測地系の値を採用。公開値は小数点以下4桁で、位置精度に限界があります。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "日本測地系",
+        "latDms": "354723",
+        "lonDms": "1381933"
+      }
+    },
+    {
+      "id": "H4249",
+      "name": "西之久保遺跡",
+      "reading": "にしのくぼいせき",
+      "lat": 35.7949,
+      "lon": 138.3172,
+      "coordinateText": [
+        "35.7949",
+        "138.3172"
+      ],
+      "address": "山梨県北巨摩郡白州町白須字西之久保2401ほか",
+      "period": "縄文 / 弥生 / 平安 / 中世(細分不明)",
+      "kind": "集落",
+      "features": "竪穴建物1 / 竪穴建物3 / 地下式壙1 土坑53",
+      "finds": "土器 / 土師器",
+      "remarks": "",
+      "reportTitle": "西之久保遺跡",
+      "reportId": "4249",
+      "published": "19980331",
+      "source": "https://sitereports.nabunken.go.jp/ja/4249",
+      "siteNumber": "",
+      "surveyed": "19940530-19940729",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。日本測地系の原座標から資料サイトが自動生成した世界測地系の値を採用。公開値は小数点以下4桁で、位置精度に限界があります。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "日本測地系",
+        "latDms": "354730",
+        "lonDms": "1381913"
+      }
+    },
+    {
+      "id": "H4260",
+      "name": "屋敷平遺跡",
+      "reading": "やしきだいらいせき",
+      "lat": 35.806944,
+      "lon": 138.352222,
+      "coordinateText": [
+        "35.806944",
+        "138.352222"
+      ],
+      "address": "山梨県北巨摩郡白州町台ケ原字屋敷平/古屋敷",
+      "period": "縄文 / 中世(細分不明) 近世(細分不明) 近代(細分不明)",
+      "kind": "散布地",
+      "features": "羽口",
+      "finds": "縄文土器",
+      "remarks": "種別：包含地 / 主な時代：中世以降",
+      "reportTitle": "屋敷平遺跡",
+      "reportId": "4260",
+      "published": "19920225",
+      "source": "https://sitereports.nabunken.go.jp/ja/4260",
+      "siteNumber": "16",
+      "surveyed": "19910419-19910524",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354825",
+        "lonDms": "1382108"
+      },
+      "editorNote": "「羽口」は抄録の「主な遺構」欄の原表記です。分類の確認はしていません。"
+    },
+    {
+      "id": "H4267",
+      "name": "中山砦",
+      "reading": "なかやまとりで",
+      "lat": 35.793611,
+      "lon": 138.338611,
+      "coordinateText": [
+        "35.793611",
+        "138.338611"
+      ],
+      "address": "山梨県北巨摩郡武川村三吹字中山3037/山梨県北杜市北巨摩郡白州町台ヶ原2472ほか",
+      "period": "中世(細分不明)",
+      "kind": "城館",
+      "features": "ピット7",
+      "finds": "土師質土器",
+      "remarks": "",
+      "reportTitle": "中山砦",
+      "reportId": "4267",
+      "published": "19840410",
+      "source": "https://sitereports.nabunken.go.jp/ja/4267",
+      "siteNumber": "6-065",
+      "surveyed": "19810326 19810328-19810329 19810503-19810505",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354737",
+        "lonDms": "1382019"
+      },
+      "editorNote": "白州・武川にまたがる所在地の記録として収録。所在地は資料の原表記です。"
+    },
+    {
+      "id": "H4291",
+      "name": "旧菅原小学校遺跡",
+      "reading": "きゅうすがはらしょうがっこういせき",
+      "lat": 35.811497,
+      "lon": 138.337097,
+      "coordinateText": [
+        "35.811497",
+        "138.337097"
+      ],
+      "address": "山梨県北巨摩郡白州町白須字柳原168ほか",
+      "period": "平安 / 中世(細分不明)",
+      "kind": "集落",
+      "features": "竪穴建物7 / 土坑44",
+      "finds": "土師器",
+      "remarks": "平安時代の4号住居跡から佐波理鋺口縁部1点が出土。",
+      "reportTitle": "旧菅原小学校遺跡",
+      "reportId": "4291",
+      "published": "19970320",
+      "source": "https://sitereports.nabunken.go.jp/ja/4291",
+      "siteNumber": "",
+      "surveyed": "19930610-19930902 19940816-19940826",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。抄録の世界測地系座標を採用。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "世界測地系",
+        "latDms": "354841.39",
+        "lonDms": "1382013.55"
+      }
+    },
+    {
+      "id": "H54503",
+      "name": "上小用遺跡",
+      "reading": "かみこよういせき",
+      "lat": 35.8326,
+      "lon": 138.2988,
+      "coordinateText": [
+        "35.8326",
+        "138.2988"
+      ],
+      "address": "山梨県北巨摩郡白州町鳥原字上小用523ほか",
+      "period": "縄文 / 平安 / 中世(細分不明)",
+      "kind": "集落 / 散布地",
+      "features": "竪穴建物2 / 遺構なし / 地下式壙 土坑 竪穴 溝",
+      "finds": "縄文土器 / 土師器 / 陶器",
+      "remarks": "種別：包含地",
+      "reportTitle": "鳥原平遺跡群",
+      "reportId": "54503",
+      "published": "20000325",
+      "source": "https://sitereports.nabunken.go.jp/ja/54503",
+      "siteNumber": "",
+      "surveyed": "19970701-19971114",
+      "coordinateNote": "報告書抄録の代表点。遺跡の範囲や遺構の正確な位置を示すものではありません。日本測地系の原座標から資料サイトが自動生成した世界測地系の値を採用。公開値は小数点以下4桁で、位置精度に限界があります。",
+      "positionCheck": false,
+      "originalCoordinates": {
+        "datum": "日本測地系",
+        "latDms": "354946",
+        "lonDms": "1381807"
+      }
+    }
+  ],
+  "unlocated": [
+    {
+      "title": "大久保（白須）遺跡",
+      "source": "https://sitereports.nabunken.go.jp/ja/4044",
+      "published": "20090331"
+    },
+    {
+      "title": "所帯1遺跡・所帯2遺跡",
+      "source": "https://sitereports.nabunken.go.jp/ja/4056",
+      "published": "19890331"
+    },
+    {
+      "title": "上北田３遺跡・新居道上遺跡",
+      "source": "https://sitereports.nabunken.go.jp/ja/4201",
+      "published": "19910326"
+    },
+    {
+      "title": "市内城館跡詳細分布調査報告書",
+      "source": "https://sitereports.nabunken.go.jp/ja/4245",
+      "published": "20110331"
+    }
+  ],
+  "source": "奈良文化財研究所 全国遺跡報告総覧・全国文化財総覧の公開報告書抄録",
+  "method": "白州を検索し、所在地に白州を含み世界測地系の代表座標が掲載された記録を収録。全遺跡台帳ではありません。",
+  "limitation": "遺跡範囲のポリゴンではありません。白州の新たな地形候補の判読は未実施です。"
+};

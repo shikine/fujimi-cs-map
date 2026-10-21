@@ -1,0 +1,19 @@
+.locate-button{width:34px;height:34px;padding:0!important;font-size:17px;line-height:1;border:2px solid #0003!important;border-radius:5px!important;background:#fff;cursor:pointer}
+.locate-button.busy{opacity:.5}
+.legend-collapsible strong{cursor:pointer;user-select:none}
+.legend-collapsible strong::after{content:' ▾';color:#7a8a80}
+.legend-collapsible.collapsed strong{margin:0}
+.legend-collapsible.collapsed strong::after{content:' ▸'}
+.legend-collapsible.collapsed>*:not(strong),.legend-collapsible.collapsed>#hakushu-legend-extent{display:none}
+@media(max-width:730px){
+  header small{display:none}
+  header{gap:8px}
+  h1{font-size:16px!important}
+  .controls button,.controls select{padding:6px 8px}
+  .leaflet-control-attribution{font-size:8px!important;line-height:1.35;max-width:calc(100vw - 20px);white-space:normal}
+  .research-legend,.hydro-legend{max-width:calc(50vw - 16px)!important;font-size:11px}
+  .hydro-legend summary{font-size:11px}
+  .research-legend:not(.collapsed),.hydro-legend[open]{max-width:calc(100vw - 30px)!important;max-height:calc(100dvh - 260px);overflow:auto}
+  .leaflet-bottom .leaflet-control{margin-bottom:6px}
+  .leaflet-popup-content{margin:10px 12px}
+}

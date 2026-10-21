@@ -1,0 +1,776 @@
+{
+  "type": "FeatureCollection",
+  "name": "富士見町_公開遺跡抄録の代表点_20260930",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.276944,
+          35.878333
+        ]
+      },
+      "properties": {
+        "id": "R01",
+        "name": "曽利遺跡　第10～第12次",
+        "baseName": "曽利遺跡",
+        "address": "長野県諏訪郡富士見町境",
+        "period": "縄文 平安",
+        "features": "竪穴住居址 墓壙",
+        "source": "https://sitereports.nabunken.go.jp/ja/143005",
+        "number": "116",
+        "survey": "20210515-20210630 20220713-20220929 20230509-20230630",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "曽利遺跡　範囲内容確認のための第10～第12次発掘調査報告書および総括報告書",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.231944,
+          35.886111
+        ]
+      },
+      "properties": {
+        "id": "R02",
+        "name": "広原遺跡",
+        "baseName": "広原遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "縄文 平安",
+        "features": "住居址 集石址 陥し穴 墓壙 建物址",
+        "source": "https://sitereports.nabunken.go.jp/ja/143027",
+        "number": "41",
+        "survey": "20191209-20191226 20200803-20200930",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "広原遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.230555,
+          35.885277
+        ]
+      },
+      "properties": {
+        "id": "R03",
+        "name": "広原遺跡",
+        "baseName": "広原遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "縄文",
+        "features": "住居址 陥し穴 墓壙",
+        "source": "https://sitereports.nabunken.go.jp/ja/143029",
+        "number": "41",
+        "survey": "20210706-20211015",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "広原遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.243055,
+          35.900833
+        ]
+      },
+      "properties": {
+        "id": "R04",
+        "name": "蛇込遺跡",
+        "baseName": "蛇込遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "縄文 平安",
+        "features": "住居址 墓壙",
+        "source": "https://sitereports.nabunken.go.jp/ja/143030",
+        "number": "79",
+        "survey": "20190723-20191017",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "蛇込遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.219722,
+          35.939166
+        ]
+      },
+      "properties": {
+        "id": "R05",
+        "name": "御射山遺跡",
+        "baseName": "御射山遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "平安",
+        "features": "土壙 集石",
+        "source": "https://sitereports.nabunken.go.jp/ja/143038",
+        "number": "2",
+        "survey": "20001118-20001213",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "御射山遺跡・御射山中遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2175,
+          35.937222
+        ]
+      },
+      "properties": {
+        "id": "R06",
+        "name": "御射山中遺跡",
+        "baseName": "御射山中遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "縄文",
+        "features": "住居址 小竪穴 陥し穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/143038",
+        "number": "3",
+        "survey": "20001115-20001213",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "御射山遺跡・御射山中遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.219166,
+          35.935555
+        ]
+      },
+      "properties": {
+        "id": "R07",
+        "name": "山沢下遺跡　第２次",
+        "baseName": "山沢下遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "平安",
+        "features": "住居址 陥し穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/143047",
+        "number": "9",
+        "survey": "20190903-20190911 20191001-20191108",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "山沢下遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.266944,
+          35.893611
+        ]
+      },
+      "properties": {
+        "id": "R08",
+        "name": "小母沢遺跡　第３・４・６次",
+        "baseName": "小母沢遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "縄文",
+        "features": "竪穴住居址 小竪穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/143048",
+        "number": "88",
+        "survey": "19951014-10970113 20040819-20040906 20160809-20160826",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "小母沢遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.277683,
+          35.876488
+        ]
+      },
+      "properties": {
+        "id": "R09",
+        "name": "曽利遺跡　第7次",
+        "baseName": "曽利遺跡",
+        "address": "長野県諏訪郡富士見町",
+        "period": "縄文",
+        "features": "住居跡 小竪穴群 集石 溝状遺構",
+        "source": "https://sitereports.nabunken.go.jp/ja/22",
+        "number": "",
+        "survey": "19920605-19930319",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "曽利遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.260694,
+          35.885972
+        ]
+      },
+      "properties": {
+        "id": "R10",
+        "name": "坂上遺跡",
+        "baseName": "坂上遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "",
+        "features": "",
+        "source": "https://sitereports.nabunken.go.jp/ja/338",
+        "number": "",
+        "survey": "19740304-19740318",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "唐渡宮",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.263716,
+          35.886363
+        ]
+      },
+      "properties": {
+        "id": "R11",
+        "name": "向原遺跡",
+        "baseName": "向原遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "",
+        "features": "",
+        "source": "https://sitereports.nabunken.go.jp/ja/338",
+        "number": "",
+        "survey": "19740309-19740321",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "唐渡宮",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.265552,
+          35.888041
+        ]
+      },
+      "properties": {
+        "id": "R12",
+        "name": "唐渡宮遺跡",
+        "baseName": "唐渡宮遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "",
+        "features": "",
+        "source": "https://sitereports.nabunken.go.jp/ja/338",
+        "number": "",
+        "survey": "19740314-19740326 19761125-19761208 19770901-19770920",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "唐渡宮",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.266925,
+          35.887269
+        ]
+      },
+      "properties": {
+        "id": "R13",
+        "name": "居平遺跡",
+        "baseName": "居平遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "",
+        "features": "",
+        "source": "https://sitereports.nabunken.go.jp/ja/338",
+        "number": "",
+        "survey": "19761125-19761208",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "唐渡宮",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.276575,
+          35.878027
+        ]
+      },
+      "properties": {
+        "id": "R14",
+        "name": "曽利遺跡　第8次",
+        "baseName": "曽利遺跡",
+        "address": "長野県諏訪郡富士見町境",
+        "period": "",
+        "features": "",
+        "source": "https://sitereports.nabunken.go.jp/ja/492",
+        "number": "",
+        "survey": "19971100",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "曽利遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2788,
+          35.8754
+        ]
+      },
+      "properties": {
+        "id": "R15",
+        "name": "大花北遺跡",
+        "baseName": "大花北遺跡",
+        "address": "長野県諏訪郡富士見町境",
+        "period": "縄文",
+        "features": "竪穴建物 小竪穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/59896",
+        "number": "113",
+        "survey": "20020429-20030709",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "大花北遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2539,
+          35.9115
+        ]
+      },
+      "properties": {
+        "id": "R16",
+        "name": "黒鳥遺跡",
+        "baseName": "黒鳥遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "平安",
+        "features": "竪穴建物",
+        "source": "https://sitereports.nabunken.go.jp/ja/59896",
+        "number": "156",
+        "survey": "20020422-20020508",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "大花北遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.206388,
+          35.921111
+        ]
+      },
+      "properties": {
+        "id": "R17",
+        "name": "御所平遺跡",
+        "baseName": "御所平遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "縄文 平安",
+        "features": "竪穴建物 小竪穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/59897",
+        "number": "26",
+        "survey": "20030801-20030910",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "御所平遺跡・御所平北遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.205555,
+          35.922222
+        ]
+      },
+      "properties": {
+        "id": "R18",
+        "name": "御所平北遺跡",
+        "baseName": "御所平北遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "縄文 平安",
+        "features": "竪穴建物 小竪穴 焼土",
+        "source": "https://sitereports.nabunken.go.jp/ja/59897",
+        "number": "25",
+        "survey": "20030801-20030910",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "御所平遺跡・御所平北遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.271388,
+          35.893611
+        ]
+      },
+      "properties": {
+        "id": "R19",
+        "name": "藤内遺跡",
+        "baseName": "藤内遺跡",
+        "address": "長野県諏訪郡富士見町落合3722-23ほか",
+        "period": "縄文",
+        "features": "住居24 土坑449",
+        "source": "https://sitereports.nabunken.go.jp/ja/59898",
+        "number": "99",
+        "survey": "19840508-19840527 19841122-19841224 19881116-19890427 19890913-19891129 20080909-20080921",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "藤内",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.263888,
+          35.931944
+        ]
+      },
+      "properties": {
+        "id": "R20",
+        "name": "札沢遺跡",
+        "baseName": "札沢遺跡",
+        "address": "長野県諏訪郡富士見町立沢町道4053号線/4800-163（用悪水路）",
+        "period": "縄文",
+        "features": "住居4 配石3 小竪穴20",
+        "source": "https://sitereports.nabunken.go.jp/ja/60010",
+        "number": "62",
+        "survey": "20110916-20121127",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "札沢遺跡・中道尾根遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.265555,
+          35.9325
+        ]
+      },
+      "properties": {
+        "id": "R21",
+        "name": "中道尾根遺跡",
+        "baseName": "中道尾根遺跡",
+        "address": "長野県諏訪郡富士見町立沢町道4053号線",
+        "period": "縄文",
+        "features": "遺構なし",
+        "source": "https://sitereports.nabunken.go.jp/ja/60010",
+        "number": "63",
+        "survey": "20110916-20121127",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "札沢遺跡・中道尾根遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.275277,
+          35.901111
+        ]
+      },
+      "properties": {
+        "id": "R22",
+        "name": "小六石遺跡",
+        "baseName": "小六石遺跡",
+        "address": "長野県諏訪郡富士見町境12090-5",
+        "period": "",
+        "features": "住居1",
+        "source": "https://sitereports.nabunken.go.jp/ja/60045",
+        "number": "77",
+        "survey": "20141106-20141112",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "小六石遺跡・大泉遺跡・池袋上遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.284166,
+          35.896944
+        ]
+      },
+      "properties": {
+        "id": "R23",
+        "name": "大泉遺跡",
+        "baseName": "大泉遺跡",
+        "address": "長野県諏訪郡富士見町境大泉",
+        "period": "平安",
+        "features": "住居1",
+        "source": "https://sitereports.nabunken.go.jp/ja/60045",
+        "number": "106",
+        "survey": "20090518-20090605",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "小六石遺跡・大泉遺跡・池袋上遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.281388,
+          35.881666
+        ]
+      },
+      "properties": {
+        "id": "R24",
+        "name": "池袋上遺跡",
+        "baseName": "池袋上遺跡",
+        "address": "長野県諏訪郡富士見町境6476",
+        "period": "近世(細分不明)",
+        "features": "小竪穴 建物",
+        "source": "https://sitereports.nabunken.go.jp/ja/60045",
+        "number": "141",
+        "survey": "19840410-20111007",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "小六石遺跡・大泉遺跡・池袋上遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.263055,
+          35.944166
+        ]
+      },
+      "properties": {
+        "id": "R25",
+        "name": "大婦奈遺跡",
+        "baseName": "大婦奈遺跡",
+        "address": "長野県諏訪郡富士見町立沢2808",
+        "period": "縄文",
+        "features": "小竪穴1",
+        "source": "https://sitereports.nabunken.go.jp/ja/60088",
+        "number": "58",
+        "survey": "20060523-20060526",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "坪平遺跡・大婦奈遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.259166,
+          35.933055
+        ]
+      },
+      "properties": {
+        "id": "R26",
+        "name": "坪平遺跡",
+        "baseName": "坪平遺跡",
+        "address": "長野県諏訪郡富士見町立沢5350-1/5360-6/5353-5",
+        "period": "縄文",
+        "features": "住居1 小竪穴23",
+        "source": "https://sitereports.nabunken.go.jp/ja/60088",
+        "number": "61",
+        "survey": "19981021-20150728",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。 同名記録との座標差が500m以上あり、調査区の違いか記載誤りかは未確認。位置を要照合。",
+        "reportTitle": "坪平遺跡・大婦奈遺跡",
+        "hasCS": true,
+        "positionCheck": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2675,
+          35.893888
+        ]
+      },
+      "properties": {
+        "id": "R27",
+        "name": "小母沢遺跡",
+        "baseName": "小母沢遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "縄文",
+        "features": "住居4 小竪穴57",
+        "source": "https://sitereports.nabunken.go.jp/ja/60089",
+        "number": "88",
+        "survey": "19951014-20160826",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "小母沢遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2275,
+          35.930833
+        ]
+      },
+      "properties": {
+        "id": "R28",
+        "name": "徳久利遺跡",
+        "baseName": "徳久利遺跡",
+        "address": "長野県諏訪郡富士見町富士見11836-8ほか",
+        "period": "縄文",
+        "features": "集石",
+        "source": "https://sitereports.nabunken.go.jp/ja/7518",
+        "number": "1",
+        "survey": "20071115-20071128",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "徳久利遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2175,
+          35.9357
+        ]
+      },
+      "properties": {
+        "id": "R32",
+        "name": "山沢下遺跡",
+        "baseName": "山沢下遺跡",
+        "address": "長野県諏訪郡富士見町富士見",
+        "period": "平安",
+        "features": "竪穴住居",
+        "source": "https://sitereports.nabunken.go.jp/ja/7957",
+        "number": "9",
+        "survey": "20010625-20010702",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "山沢下遺跡",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.265555,
+          35.926666
+        ]
+      },
+      "properties": {
+        "id": "R33",
+        "name": "坪平遺跡",
+        "baseName": "坪平遺跡",
+        "address": "長野県諏訪郡富士見町立沢",
+        "period": "縄文",
+        "features": "配石",
+        "source": "https://sitereports.nabunken.go.jp/ja/8225",
+        "number": "61",
+        "survey": "20041109-20041127",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。 同名記録との座標差が500m以上あり、調査区の違いか記載誤りかは未確認。位置を要照合。",
+        "reportTitle": "坪平遺跡　森平遺跡　御射山遺跡",
+        "hasCS": true,
+        "positionCheck": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.277777,
+          35.866666
+        ]
+      },
+      "properties": {
+        "id": "R38",
+        "name": "坂平遺跡",
+        "baseName": "坂平遺跡",
+        "address": "長野県諏訪郡富士見町落合",
+        "period": "縄文 平安 中世(細分不明) 近世(細分不明)",
+        "features": "竪穴住居 建物 小竪穴",
+        "source": "https://sitereports.nabunken.go.jp/ja/9198",
+        "number": "152",
+        "survey": "19960913-19961228",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 世界測地系の掲載値を使用。",
+        "reportTitle": "坂平",
+        "hasCS": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.2719,
+          35.8726
+        ]
+      },
+      "properties": {
+        "id": "R39",
+        "name": "夏焼遺跡",
+        "baseName": "夏焼遺跡",
+        "address": "長野県富士見町落合",
+        "period": "中世(細分不明) 近世(細分不明)",
+        "features": "掘立柱建物址4棟 汐状遺構",
+        "source": "https://sitereports.nabunken.go.jp/ja/9217",
+        "number": "154",
+        "survey": "20020712-20021220",
+        "coordinateNote": "公開抄録の代表点。遺跡の範囲や個別遺構の位置ではありません。 日本測地系の原記録からデータベース側で生成された世界測地系座標。",
+        "reportTitle": "夏焼遺跡",
+        "hasCS": true
+      }
+    }
+  ]
+}
