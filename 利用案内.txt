@@ -57,3 +57,10 @@ https://www.geospatial.jp/ckan/dataset/r3-r4_cs/resource/f8f794fd-451b-409e-bef2
 標高：産総研シームレス標高タイル（長野県林業総合センター・長野県砂防課・山梨県の0.5m由来）、欠測部は国土地理院10m DEM。
 注意：道路の盛土や水路・暗渠は計算に反映されないため、道路沿いに不自然な川筋が出ることがあります。地図上の実際の川と違う場合は地図の川を優先してください。
 再計算：work/build_hydro.py（出力 hydro-data.js、hydro-tiles.js、hydro-tiles/）。
+
+戦前の地形図レイヤー（2026年10月22日追加・右上「戦前の地形図（1929〜31年）」）
+旧陸地測量部の5万分1地形図「八ヶ岳」「高遠」「韮崎」「諏訪」（明治43年測図、昭和4〜6年修正）を重ねて表示します。チェックで表示、スライダーで濃さを調整できます。
+画像：Image from the Map Collections courtesy Stanford University Libraries, licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License. © Stanford University.（CC BY-NC 3.0・非営利に限る）
+位置合わせ：日本版Map Warper（https://mapwarper.h-gis.jp/）の整形済み画像を取得し、図郭線で切り抜いて接合、ズーム10〜15のタイル（oldmap-tiles/）に変換しました。
+図郭は日本測地系→世界測地系の換算と、明治期測図の旧経度（10.405秒）を補正した線です。現在の地図との位置差は多くの場所で数十m以内、最大100m前後です。
+再作成：work/build_oldmap.py（出力 oldmap-tiles.js、oldmap-tiles/。取得済み画像は work/oldmap-cache/ に保存）。
