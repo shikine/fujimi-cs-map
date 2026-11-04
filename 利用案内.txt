@@ -59,7 +59,7 @@ https://www.geospatial.jp/ckan/dataset/r3-r4_cs/resource/f8f794fd-451b-409e-bef2
 再計算：work/build_hydro.py（出力 hydro-data.js、hydro-tiles.js、hydro-tiles/）。
 
 昔の地図・写真（右上「昔の地図・写真」、スマホは右下「表示・レイヤー」）
-年代を選んで重ねます。「地形図 1929〜31年」は旧陸地測量部の5万分1地形図「八ヶ岳」「高遠」「韮崎」「諏訪」（明治43年測図、昭和4〜6年修正）、「空中写真 1974〜78年」は国土地理院のカラー空中写真（地理院タイルを直接表示）です。スライダーで濃さを調整できます。
+年代を選んで重ねます。※「地形図 1929〜31年」は測量法の複製承認を得るまで公開版では表示していません。「地形図 1929〜31年」は旧陸地測量部の5万分1地形図「八ヶ岳」「高遠」「韮崎」「諏訪」（明治43年測図、昭和4〜6年修正）、「空中写真 1974〜78年」は国土地理院のカラー空中写真（地理院タイルを直接表示）です。スライダーで濃さを調整できます。
 画像：Image from the Map Collections courtesy Stanford University Libraries, licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License. © Stanford University.（CC BY-NC 3.0・非営利に限る）
 位置合わせ：日本版Map Warper（https://mapwarper.h-gis.jp/）の整形済み画像を取得し、図郭線で切り抜いて接合、ズーム10〜15のタイル（oldmap-tiles/）に変換しました。
 図郭は日本測地系→世界測地系の換算と、明治期測図の旧経度（10.405秒）を補正した線です。現在の地図との位置差は多くの場所で数十m以内、最大100m前後です。
