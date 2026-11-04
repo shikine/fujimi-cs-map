@@ -5,15 +5,60 @@
 .legend-collapsible.collapsed strong{margin:0}
 .legend-collapsible.collapsed strong::after{content:' ▸'}
 .legend-collapsible.collapsed>*:not(strong),.legend-collapsible.collapsed>#hakushu-legend-extent{display:none}
+.m-fab,.m-sheet{display:none}
+
 @media(max-width:730px){
+  header{padding:8px 12px!important;gap:0!important;min-height:0}
   header small{display:none}
-  header{gap:8px}
-  h1{font-size:16px!important}
-  .controls button,.controls select{padding:6px 8px}
-  .leaflet-control-attribution{font-size:8px!important;line-height:1.35;max-width:calc(100vw - 20px);white-space:normal}
-  .research-legend,.hydro-legend{max-width:calc(50vw - 16px)!important;font-size:11px}
-  .hydro-legend summary{font-size:11px}
-  .research-legend:not(.collapsed),.hydro-legend[open]{max-width:calc(100vw - 30px)!important;max-height:calc(100dvh - 260px);overflow:auto}
-  .leaflet-bottom .leaflet-control{margin-bottom:6px}
+  h1{font-size:15px!important;letter-spacing:.02em}
+  .bottom{display:none!important}
+  #map{height:auto!important}
+
+  .leaflet-touch .leaflet-bar a{width:38px;height:38px;line-height:38px}
+  .locate-button{width:42px;height:42px;font-size:19px}
+
+  /* Map button that opens the sheet */
+  .m-fab{display:flex;align-items:center;gap:6px;border:0;border-radius:22px;padding:11px 16px;background:#205d4d;color:#fff;font:inherit;font-size:14px;font-weight:600;box-shadow:0 3px 12px #0004;cursor:pointer}
+  body.sheet-open .m-fab{background:#fff;color:#205d4d}
+
+  /* Attribution folds to one tap target; the full credit opens on tap */
+  .leaflet-control-attribution{max-width:calc(100vw - 20px);cursor:pointer;line-height:1.4;white-space:normal}
+  .leaflet-control-attribution:not(.open){font-size:0!important;padding:3px 7px}
+  .leaflet-control-attribution:not(.open)::before{content:'ⓘ 出典';font-size:11px;color:#41594d}
+  .leaflet-control-attribution:not(.open) *{display:none}
+  .leaflet-control-attribution.open{font-size:10px!important;padding:6px 8px}
+
+  /* Bottom sheet */
+  .m-sheet{display:flex;flex-direction:column;position:fixed;left:0;right:0;bottom:0;z-index:1500;max-height:68dvh;background:#fbfcf9;border-radius:16px 16px 0 0;box-shadow:0 -6px 28px #0003;color:#183430;padding-bottom:env(safe-area-inset-bottom)}
+  .m-sheet[hidden]{display:none}
+  .m-sheet-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 8px;border-bottom:1px solid #e1e8e3;font-size:15px}
+  .m-sheet-head::before{content:'';position:absolute;left:50%;top:5px;width:38px;height:4px;margin-left:-19px;border-radius:2px;background:#cfd8d2}
+  .m-sheet-close{border:1px solid #d9e4de;border-radius:8px;background:#fff;padding:7px 12px;font:inherit;font-size:13px}
+  .m-sheet-body{overflow:auto;-webkit-overflow-scrolling:touch;padding:4px 16px 16px;overscroll-behavior:contain}
+  .m-sec{padding:12px 0;border-bottom:1px solid #e8eee9}
+  .m-sec:empty{display:none}
+  .m-sec h2{font-size:13px;margin:0 0 8px;color:#41594d}
+  .m-links{display:flex;gap:18px;font-size:13px;border-bottom:0}
+
+  /* Moved header controls */
+  .m-sheet .controls{display:flex;flex-wrap:wrap;gap:10px;margin:0;width:auto;font-size:14px}
+  .m-sheet .controls button,.m-sheet .controls select{padding:10px 13px;font-size:14px}
+  .m-sheet .area-buttons{width:100%;display:flex;gap:6px}
+  .m-sheet .area-buttons button{flex:1}
+  .m-sheet .controls label{width:100%;justify-content:space-between}
+  .m-sheet .controls input[type=range]{flex:1;width:auto!important}
+
+  /* Legends become plain sections inside the sheet (Leaflet controls float by default) */
+  .m-sheet .leaflet-control{float:none;clear:none;margin:0}
+  .m-sheet .research-legend,.m-sheet .hydro-legend,.m-sheet .oldmap-panel{max-width:none!important;max-height:none!important;overflow:visible;background:none;border:0;box-shadow:none;padding:0;margin:0;font-size:13px;line-height:1.6}
+  .m-sheet .research-legend strong,.m-sheet .oldmap-title,.m-sheet .hydro-legend summary{font-size:13px;color:#41594d;margin-bottom:6px}
+  .m-sheet .research-legend label,.m-sheet .hydro-legend label,.m-sheet .oldmap-eras label{min-height:38px;align-items:center;gap:9px}
+  .m-sheet input[type=checkbox],.m-sheet input[type=radio]{width:20px;height:20px;flex:none}
+  .m-sheet .research-legend p,.m-sheet .hydro-legend p,.m-sheet .oldmap-body p{font-size:11.5px}
+  .m-sheet #hakushu-legend-extent{font-size:12px;padding:7px 10px;margin:4px 0 6px}
+  .m-sheet .oldmap-slider{min-height:38px}
+  .m-sheet .hydro-sub{margin-left:29px}
+  .m-sheet .legend-collapsible strong::after{content:''}
+
   .leaflet-popup-content{margin:10px 12px}
 }

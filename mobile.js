@@ -1,4 +1,4 @@
-/* Phone layout: both legends start folded and only one is open at a time. */
+/* Phone layout: header controls and legends move into one bottom sheet, opened from a map button. */
 (() => {
   'use strict';
   const small = matchMedia('(max-width:730px)');
@@ -9,17 +9,81 @@
     research.classList.add('legend-collapsible');
     title.setAttribute('role', 'button');
     title.tabIndex = 0;
-    const toggle = () => {
-      research.classList.toggle('collapsed');
-      if (small.matches && !research.classList.contains('collapsed') && hydro) hydro.open = false;
-    };
+    const toggle = () => research.classList.toggle('collapsed');
     title.onclick = toggle;
     title.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } };
   }
-  if (hydro) hydro.addEventListener('toggle', () => { if (small.matches && hydro.open && research) research.classList.add('collapsed'); });
+
+  // Bottom sheet. Moved nodes keep their own event handlers and go back on wider screens.
+  const sheet = document.createElement('section');
+  sheet.className = 'm-sheet';
+  sheet.id = 'm-sheet';
+  sheet.setAttribute('aria-label', '表示とレイヤー');
+  sheet.hidden = true;
+  sheet.innerHTML = `<div class="m-sheet-head"><strong>表示とレイヤー</strong><button type="button" class="m-sheet-close" aria-label="閉じる">閉じる</button></div>
+    <div class="m-sheet-body">
+      <div class="m-sec" data-sec="view"><h2>地図</h2></div>
+      <div class="m-sec" data-sec="old"></div>
+      <div class="m-sec" data-sec="water"></div>
+      <div class="m-sec" data-sec="sites"></div>
+      <div class="m-sec m-links"><a href="データ出典.html" target="_blank" rel="noopener">データの出典・範囲 ↗</a><a href="利用案内.txt" target="_blank" rel="noopener">使い方 ↗</a></div>
+    </div>`;
+  document.body.append(sheet);
+  L.DomEvent.disableClickPropagation(sheet);
+  L.DomEvent.disableScrollPropagation(sheet);
+
+  const moves = [
+    ['.controls', 'view'], ['.oldmap-panel', 'old'], ['.hydro-legend', 'water'], ['.research-legend', 'sites']
+  ].map(([sel, sec]) => {
+    const node = document.querySelector(sel);
+    return node && {node, home: node.parentNode, next: node.nextSibling, target: sheet.querySelector(`[data-sec="${sec}"]`)};
+  }).filter(Boolean);
+
+  let fab;
+  const Fab = L.Control.extend({options: {position: 'bottomright'}, onAdd() {
+    fab = L.DomUtil.create('button', 'm-fab');
+    fab.type = 'button';
+    fab.setAttribute('aria-controls', 'm-sheet');
+    fab.setAttribute('aria-expanded', 'false');
+    fab.innerHTML = '<span aria-hidden="true">☰</span> 表示・レイヤー';
+    L.DomEvent.disableClickPropagation(fab);
+    fab.onclick = () => openSheet(sheet.hidden);
+    return fab;
+  }});
+  new Fab().addTo(map);
+
+  function openSheet(open) {
+    sheet.hidden = !open;
+    document.body.classList.toggle('sheet-open', open);
+    fab.setAttribute('aria-expanded', String(open));
+  }
+  sheet.querySelector('.m-sheet-close').onclick = () => openSheet(false);
+  // Actions that move the map or open another panel close the sheet so the result is visible.
+  sheet.addEventListener('click', e => {
+    if (e.target.closest('#extent,#fujimi,#hakushu,#results,#export3d,#hakushu-legend-extent')) openSheet(false);
+  });
+  map.on('click', () => { if (small.matches) openSheet(false); });
+
+  const attribution = map.attributionControl && map.attributionControl.getContainer();
+  if (attribution) {
+    attribution.addEventListener('click', e => {
+      if (small.matches && !e.target.closest('a')) attribution.classList.toggle('open');
+    });
+  }
+
   const apply = () => {
-    if (research) research.classList.toggle('collapsed', small.matches);
-    if (hydro) hydro.open = !small.matches;
+    const phone = small.matches;
+    for (const m of moves) {
+      if (phone) m.target.append(m.node);
+      else m.home.insertBefore(m.node, m.next && m.next.parentNode === m.home ? m.next : null);
+    }
+    if (phone) {
+      if (research) research.classList.remove('collapsed');
+      if (hydro) hydro.open = true;
+    } else {
+      openSheet(false);
+    }
+    document.body.classList.toggle('phone', phone);
     map.invalidateSize();
   };
   small.addEventListener('change', apply);
