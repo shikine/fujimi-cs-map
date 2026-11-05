@@ -23,6 +23,7 @@
   sheet.innerHTML = `<div class="m-sheet-head"><strong>表示とレイヤー</strong><button type="button" class="m-sheet-close" aria-label="閉じる">閉じる</button></div>
     <div class="m-sheet-body">
       <div class="m-sec" data-sec="view"><h2>地図</h2></div>
+      <div class="m-sec" data-sec="lidar"></div>
       <div class="m-sec" data-sec="old"></div>
       <div class="m-sec" data-sec="water"></div>
       <div class="m-sec" data-sec="sites"></div>
@@ -33,7 +34,7 @@
   L.DomEvent.disableScrollPropagation(sheet);
 
   const moves = [
-    ['.controls', 'view'], ['.oldmap-panel', 'old'], ['.hydro-legend', 'water'], ['.research-legend', 'sites']
+    ['.controls', 'view'], ['.lidar-panel', 'lidar'], ['.oldmap-panel', 'old'], ['.hydro-legend', 'water'], ['.research-legend', 'sites']
   ].map(([sel, sec]) => {
     const node = document.querySelector(sel);
     return node && {node, home: node.parentNode, next: node.nextSibling, target: sheet.querySelector(`[data-sec="${sec}"]`)};

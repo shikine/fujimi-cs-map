@@ -12,8 +12,8 @@
     const OldLayer = L.TileLayer.extend({getTileUrl(c) { const k = c.z + '/' + c.x + '/' + c.y; return available.has(k) ? 'oldmap-tiles/' + k + '.webp' : blank; }});
     eras.push({
       id: 'map1930', label: '地形図 1929〜31年',
-      // Above both CS layers (zIndex 2-3), below the water-estimate panes.
-      layer: new OldLayer('', {minZoom: 10, maxNativeZoom: D.maxNativeZoom, maxZoom: 20, bounds: D.bounds, zIndex: 4,
+      // Above both CS layers (zIndex 2-3) and the LiDAR layer (4), below the water-estimate panes.
+      layer: new OldLayer('', {minZoom: 10, maxNativeZoom: D.maxNativeZoom, maxZoom: 20, bounds: D.bounds, zIndex: 5,
         attribution: `戦前の地形図：${link(STANFORD, 'Stanford University Libraries')}（${link(LICENSE, 'CC BY-NC 3.0')}）・位置合わせ ${link(WARPER, '日本版Map Warper')}`}),
       desc: `5万分1地形図「${D.sheets.map(s => s.name).join('・')}」（明治43年測図・昭和4〜6年修正）。位置は数十m程度ずれることがあります。`,
       credit: `画像：${link(STANFORD, 'Stanford University Libraries')}、${link(LICENSE, 'CC BY-NC 3.0')}（非営利）。位置合わせ：${link(WARPER, '日本版Map Warper')}。`
@@ -22,7 +22,7 @@
   const GSI = 'https://maps.gsi.go.jp/development/ichiran.html';
   eras.push({
     id: 'photo1975', label: '空中写真 1974〜78年',
-    layer: L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {minZoom: 10, maxNativeZoom: 17, maxZoom: 20, zIndex: 4,
+    layer: L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {minZoom: 10, maxNativeZoom: 17, maxZoom: 20, zIndex: 5,
       attribution: `空中写真（1974〜1978年）：${link(GSI, '国土地理院')}`}),
     desc: '国土地理院が昭和49〜53年に撮影したカラー空中写真。開発前の田畑・森林・集落の様子が分かります。',
     credit: `出典：${link(GSI, '国土地理院 地理院タイル（1974年〜1978年の空中写真）')}。インターネット接続が必要です。`
