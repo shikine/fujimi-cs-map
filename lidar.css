@@ -27,6 +27,8 @@
 .lidar-ticks span:first-child{transform:none}
 .lidar-ticks span:last-child{transform:translateX(-100%)}
 
+.afm-layer{mix-blend-mode:multiply}
+
 /* Swipe divider */
 .lidar-divider{position:absolute;top:0;bottom:0;left:50%;width:0;z-index:650;pointer-events:none}
 .lidar-divider[hidden]{display:none}

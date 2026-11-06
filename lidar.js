@@ -57,7 +57,8 @@
   const REFS = window.PALEO_REFS || {}, EVENTS = window.PALEO_EVENTS || [], RATES = window.PALEO_RATES || [];
   const yearsText = a => a <= 0 ? '現在' : a >= 10000 ? `約${(a / 10000).toFixed(a >= 100000 ? 0 : 1).replace(/\.0$/, '')}万年前` : `約${Math.round(a / 100) * 100}年前`;
   const cites = keys => keys.map(k => REFS[k] && link(REFS[k].url, REFS[k].short)).filter(Boolean).join('・');
-  const faults = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png', {minZoom: 10, maxNativeZoom: 16, maxZoom: 20, zIndex: 6, opacity: .85,
+  // The GSI active-fault map also paints landform classes; multiply it lightly so the terrain shows through.
+  const faults = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png', {minZoom: 10, maxNativeZoom: 16, maxZoom: 20, zIndex: 6, opacity: .6, className: 'afm-layer',
     attribution: `活断層：${link('https://www.gsi.go.jp/bousaichiri/active_fault.html', '国土地理院 都市圏活断層図')}`});
 
   const Panel = L.Control.extend({options: {position: 'topright'}, onAdd() {
@@ -76,7 +77,7 @@
           <div class="lidar-time-ends"><span>${yearsText(OLDEST)}</span><output id="lidar-phase"></output><span>現在</span></div>
           <p class="lidar-event" id="lidar-event"></p>
           <p class="lidar-offsets" id="lidar-offsets"></p>
-          <label class="lidar-row"><input type="checkbox" id="lidar-faults">活断層の線を重ねる（国土地理院）</label>
+          <label class="lidar-row"><input type="checkbox" id="lidar-faults">活断層図を重ねる（国土地理院・断層線と地形分類）</label>
         </div>
         <label class="lidar-row"><input type="checkbox" id="lidar-swipe">左右に分けて比べる（左＝下の地図）</label>
         <label class="lidar-row lidar-slider">濃さ<input type="range" id="lidar-opacity" min="0" max="100" value="100" aria-label="LiDARレイヤーの濃さ"><output id="lidar-pct">100%</output></label>
