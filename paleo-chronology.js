@@ -26,7 +26,7 @@ window.PALEO_EVENTS = [
   {age: 5000, text: '縄文時代中期・井戸尻文化。三里原・広原の台地の上に集落が集まる', refs: ['kawachi1977', 'fujimi2024']},
   {age: 1900, text: '白州断層の最新の大地震（約2,110〜1,640年前、上下に約1mずれる）', refs: ['yamanaka2023', 'itoshizu2015']},
   {age: 1100, text: '釜無山断層群（中南部区間）の最新の大地震（約1,300〜900年前。762年か841年の地震の可能性）', refs: ['itoshizu2015']},
-  {age: 0, text: '現在', refs: []}
+  {age: 0, text: 'の地形（標高は2013年以降の航空レーザ測量などによる）', refs: []}
 ];
 
 // Long-term rates, metres per 1000 years (== mm/yr). Shown as offsets accumulated since the selected time.

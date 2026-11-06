@@ -28,6 +28,16 @@
 .lidar-ticks span:last-child{transform:translateX(-100%)}
 
 .afm-layer{mix-blend-mode:multiply}
+.afm-legend{margin:4px 0 2px;border:1px solid #dbe4ea;border-radius:7px;padding:4px 7px;background:#fff}
+.afm-legend summary{cursor:pointer;font-weight:650;color:#244a5e;font-size:11.5px}
+.afm-legend h4{margin:7px 0 3px;font-size:11px;color:#4f6370}
+.afm-legend ul{list-style:none;margin:0;padding:0}
+.afm-legend li{display:flex;align-items:center;gap:8px;padding:2px 0;font-size:11px;line-height:1.35}
+.afm-legend li b{font-weight:600;color:#21343f}
+.afm-legend li small{display:block;font-size:10px;color:#5d6f7a}
+.afm-sym{flex:none;width:66px;display:flex;justify-content:center;align-items:center;min-height:16px}
+.afm-sym img{display:block;height:auto}
+.lidar-body p.afm-note{font-size:10px;margin:4px 0}
 
 /* Swipe divider */
 .lidar-divider{position:absolute;top:0;bottom:0;left:50%;width:0;z-index:650;pointer-events:none}
@@ -44,6 +54,14 @@
   .m-sheet .lidar-list label,.m-sheet .lidar-row{min-height:38px;gap:9px}
   .m-sheet .lidar-body{max-height:none;overflow:visible}
   .m-sheet .lidar-more summary{font-size:12.5px;min-height:32px;display:flex;align-items:center}
+  .m-sheet .afm-legend{padding:6px 10px}
+  .m-sheet .afm-legend summary{font-size:13px;min-height:34px;display:flex;align-items:center}
+  .m-sheet .afm-legend h4{font-size:12.5px;margin:10px 0 4px}
+  .m-sheet .afm-legend li{font-size:13px;gap:12px;padding:5px 0;border-top:1px solid #eef2f4}
+  .m-sheet .afm-legend li small{font-size:11.5px}
+  .m-sheet .afm-sym{width:78px}
+  .m-sheet .afm-sym img{transform:scale(1.15)}
+  .m-sheet .lidar-body p.afm-note{font-size:11.5px}
   .m-sheet .lidar-body p{font-size:11.5px}
   .lidar-side{top:56px}
 }

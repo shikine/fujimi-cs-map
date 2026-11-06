@@ -60,6 +60,34 @@
   // The GSI active-fault map also paints landform classes; multiply it lightly so the terrain shows through.
   const faults = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png', {minZoom: 10, maxNativeZoom: 16, maxZoom: 20, zIndex: 6, opacity: .6, className: 'afm-layer',
     attribution: `活断層：${link('https://www.gsi.go.jp/bousaichiri/active_fault.html', '国土地理院 都市圏活断層図')}`});
+  // Symbols seen in this area, cut from GSI's official legend (work/build_afm_legend.py). [slug, name, meaning, width px @4x]
+  const AFM_LINES = [
+    ['fault', '活断層', '位置がはっきり分かる活断層', 198],
+    ['fault-unclear', '活断層（位置やや不明確）', '侵食や人工の改変で位置が少しあいまい', 198],
+    ['dip-slip', '縦ずれの向き', '短い線の側が相対的に低い', 198],
+    ['strike-slip', '横ずれの向き', '矢印の向きに相対的にずれている', 138],
+    ['flexure', '活撓曲', '段差ではなく、たわみとして現れた所', 216],
+    ['buried', '伏在部', '新しい地層に覆われ、地表に段差が見えない部分', 190],
+    ['inferred', '推定活断層', '地形から推定されるが、まだ確定できないもの', 201],
+    ['inferred-unclear', '推定活断層（位置やや不明確）', '', 201],
+    ['trench', 'トレンチ調査地点', '溝を掘って断層の動きを調べた所', 197],
+    ['outcrop', '活断層露頭', '新しい地層を断層が切っているのを確かめた所', 197],
+    ['tilt', '地形面の傾動方向', '地殻変動で地面が傾いている向き', 96]
+  ];
+  const AFM_AREAS = [
+    ['terrace-h', '上位段丘面', '約数十万年前に川などが離れた台地（数字1が古く、2が新しい）', 140],
+    ['terrace-m', '中位段丘面', '約10万〜数万年前に離れた台地', 140],
+    ['terrace-l', '下位段丘面', '約数万〜数千年前に離れた台地', 140],
+    ['alluvial', '沖積低地', '数千年前から今までに川がつくった平地', 140],
+    ['fan', '扇状地・沖積錐', '谷の出口から扇形に広がる地形', 140],
+    ['landslide', '地すべり', '斜面の一部が下へ動いた所（滑落崖と移動した土塊）', 166],
+    ['offset-valley', '変位した谷線', '断層の横ずれで食い違った谷', 205],
+    ['debris-avalanche', '岩屑なだれ堆積面', '山体崩壊の岩塊が流れて積もった起伏のある土地', 140],
+    ['mudflow', '泥流堆積面', '泥流が流れて積もった平らな土地', 140],
+    ['dome', '溶岩円頂丘', '粘り気の強い溶岩が盛り上がってできた丘', 140]
+  ];
+  const afmRows = rows => rows.map(([slug, name, meaning, w]) =>
+    `<li><span class="afm-sym"><img src="afm-legend/${slug}.webp" alt="" style="width:${Math.round(w / 3.4)}px"></span><span><b>${name}</b>${meaning ? `<small>${meaning}</small>` : ''}</span></li>`).join('');
 
   const Panel = L.Control.extend({options: {position: 'topright'}, onAdd() {
     const box = L.DomUtil.create('section', 'lidar-panel');
@@ -78,6 +106,12 @@
           <p class="lidar-event" id="lidar-event"></p>
           <p class="lidar-offsets" id="lidar-offsets"></p>
           <label class="lidar-row"><input type="checkbox" id="lidar-faults">活断層図を重ねる（国土地理院・断層線と地形分類）</label>
+          <details class="afm-legend" id="afm-legend" open hidden><summary>活断層図の凡例</summary>
+            <p class="afm-note">半透明で重ねているため、色は凡例より薄く見えます。灰色の陰影・等高線・文字は活断層図の下図です。</p>
+            <h4>断層の線と記号</h4><ul>${afmRows(AFM_LINES)}</ul>
+            <h4>地形の区分（色・模様）</h4><ul>${afmRows(AFM_AREAS)}</ul>
+            <p class="afm-note">出典：国土地理院「活断層図（都市圏活断層図）」の${link('https://www.gsi.go.jp/common/000084060.pdf', '記号一覧（PDF）')}から、この範囲で使われている記号を抜き出しました。</p>
+          </details>
         </div>
         <label class="lidar-row"><input type="checkbox" id="lidar-swipe">左右に分けて比べる（左＝下の地図）</label>
         <label class="lidar-row lidar-slider">濃さ<input type="range" id="lidar-opacity" min="0" max="100" value="100" aria-label="LiDARレイヤーの濃さ"><output id="lidar-pct">100%</output></label>
@@ -154,7 +188,7 @@
     el('lidar-phase').textContent = yearsText(age);
     // The latest dated event at or before the selected time.
     const ev = EVENTS.filter(e => e.age >= age).sort((a, b) => a.age - b.age)[0];
-    el('lidar-event').innerHTML = ev ? `<b>${yearsText(ev.age)}</b> ${ev.text}${ev.refs.length ? `（${cites(ev.refs)}）` : ''}` : '';
+    el('lidar-event').innerHTML = ev ? `<b>${yearsText(ev.age)}</b>${ev.age ? ' ' : ''}${ev.text}${ev.refs.length ? `（${cites(ev.refs)}）` : ''}` : '';
     el('lidar-offsets').innerHTML = age > 0 ? 'この時から現在までの動き（年平均の値から）：' + RATES.map(r => {
       const lo = r.lo * age / 1000, hi = r.hi * age / 1000, m = v => v >= 1000 ? (v / 1000).toFixed(1) + 'km' : Math.round(v) + 'm';
       return `${r.name} ${r.kind} ${lo === hi ? '約' + m(lo) : `${m(lo)}〜${m(hi)}`}（${cites(r.refs)}）`;
@@ -179,7 +213,7 @@
 
   const select = id => {
     setPlaying(false);
-    map.removeLayer(faults); el('lidar-faults').checked = false;
+    map.removeLayer(faults); el('lidar-faults').checked = false; el('afm-legend').hidden = true;
     if (current) { boxes().forEach(b => { b.style.clip = ''; }); current.layers.forEach(l => map.removeLayer(l)); }
     current = layers.find(l => l.id === id) || null;
     el('lidar-body').hidden = !current;
@@ -208,5 +242,8 @@
   };
   el('lidar-t').oninput = e => { setPlaying(false); t = +e.target.value / 1000; paint(); };
   el('lidar-play').onclick = () => setPlaying(!playing);
-  el('lidar-faults').onchange = e => { if (e.target.checked) faults.addTo(map); else map.removeLayer(faults); };
+  el('lidar-faults').onchange = e => {
+    if (e.target.checked) faults.addTo(map); else map.removeLayer(faults);
+    el('afm-legend').hidden = !e.target.checked;
+  };
 })();
